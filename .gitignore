@@ -205,3 +205,19 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+
+# Project-specific
+# extensions
+**/*.pth
+**/*.pt
+**/*.cfg
+**/*.weights
+
+# directories
+**/*_data/
+**/*img*/
+
+# specific paths
+detection/coco/models/ssd/NVIDIA*
+detection/coco/models/yolov3/darknet53.conv.74
