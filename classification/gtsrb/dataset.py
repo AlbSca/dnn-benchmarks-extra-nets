@@ -36,13 +36,13 @@ def data_transform(size=(128,128)):
     return data_transforms
 
 
-def getGTSRB(datadir, batch_size = 64, num_workers = 8):
+def getGTSRB(datadir, batch_size = 64, num_workers = 8, image_size = 32):
     dataset = torchvision.datasets.GTSRB(
         datadir, split="test", download=True
     )
 
     dataset = TransformableSubset(
-        dataset, data_transform=data_transform(size=(32,32))
+        dataset, data_transform=data_transform(size=(image_size,image_size))
     )
     
     testloader = DataLoader(
